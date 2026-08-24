@@ -1,0 +1,360 @@
+/* --- Variables et Reset --- */
+:root {
+    --bg-dark: #0f0f13;
+    --bg-card: #18181c;
+    --primary-color: #00f3ff; /* Bleu Néon */
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* --- Barre de Navigation --- */
+.navbar {
+    position: fixed; /* Fixe le menu en haut */
+    top: 0;
+    width: 100%;
+    background: rgba(15, 15, 19, 0.85); /* Fond sombre transparent */
+    backdrop-filter: blur(10px); /* Effet de flou moderne */
+    border-bottom: 1px solid rgba(0, 243, 255, 0.1);
+    z-index: 1000; /* Permet au menu de toujours rester au premier plan */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--primary-color); /* Le bleu néon sur la 2ème partie de ton pseudo */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5); /* Effet néon au survol */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 15px auto 0;
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* --- Hero Header --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #1a1a24 0%, #0f0f13 100%);
+    border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+    padding-top: 80px; /* Ligne à ajouter si elle n'y est pas */
+}
+
+.glitch-text {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.btn-neon {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    transition: var(--transition);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.2) inset;
+}
+
+.btn-neon:hover {
+    background-color: var(--primary-color);
+    color: #000;
+    box-shadow: 0 0 20px var(--primary-color), 0 0 40px var(--primary-color);
+}
+
+/* --- À propos --- */
+.about-content {
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #2a2a35;
+}
+
+.skills-list {
+    list-style: none;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skills-list li {
+    background: rgba(255,255,255,0.03);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color);
+}
+
+/* --- Scripts Section (Style Editeur de code) --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.script-card {
+    background-color: #1e1e24;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid #333;
+}
+
+.card-header {
+    background-color: #2d2d36;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #1e1e24;
+}
+
+.dot {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.file-name {
+    margin-left: 15px;
+    font-family: monospace;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-body h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* --- Galerie & Filtres --- */
+.filter-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--text-muted);
+    color: var(--text-muted);
+    padding: 10px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--primary-color);
+    color: #000;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Classe utilisée par le JavaScript pour masquer les éléments */
+.gallery-item.hide {
+    display: none;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 243, 255, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.gallery-item .overlay span {
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transform: translateY(20px);
+    transition: var(--transition);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .overlay span {
+    transform: translateY(0);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #0a0a0c;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid #1a1a24;
+}
+
+.highlight {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* --- Vidéos des Scripts --- */
+.script-video {
+    width: 100%;
+    border-bottom: 1px solid #1e1e24; /* Sépare la vidéo du texte */
+    overflow: hidden;
+}
+
+.script-video video {
+    width: 100%;
+    height: 250px; /* Hauteur de la vidéo */
+    object-fit: cover; /* Coupe la vidéo proprement sans la déformer pour remplir le cadre */
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Petit effet de zoom stylé quand tu passes la souris sur la carte entière */
+.script-card:hover .script-video video {
+    transform: scale(1.05);
+}
+
+/* --- Images des Scripts --- */
+.script-image {
+    width: 100%;
+    border-bottom: 1px solid #1e1e24; /* Sépare l'image du texte */
+    overflow: hidden;
+}
+
+.script-image img {
+    width: 100%;
+    height: 220px; /* Tu peux augmenter cette valeur si tu veux des images plus grandes */
+    object-fit: cover; /* Coupe l'image proprement sans la déformer */
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Petit effet de zoom stylé quand tu passes la souris sur la carte entière */
+.script-card:hover .script-image img {
+    transform: scale(1.05);
+}
