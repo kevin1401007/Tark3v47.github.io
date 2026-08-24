@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio | Expert FiveM</title>
+    <!-- On relie le fichier CSS ici -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Barre de navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Ton<span>Pseudo</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#scripts">Mes Scripts</a></li>
+                <li><a href="#designs">Mes Designs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <header id="home" class="hero">
+        <div class="container">
+            <h1 class="glitch-text">Tark3v47</h1>
+            <p class="subtitle">Développeur & Graphiste FiveM</p>
+            <a href="#contact" class="btn btn-neon">Travaillons ensemble</a>
+        </div>
+    </header>
+
+    <!-- Section À Propos -->
+    <section id="about" class="container section">
+        <h2 class="section-title">À Propos de moi</h2>
+        <div class="about-content">
+            <p>Passionné par l'univers de GTA V et de FiveM depuis plusieurs années, j'accompagne les fondateurs dans la création et le développement de leurs serveurs. Je mets mon savoir-faire au service de votre projet pour vous garantir un rendu unique et professionnel.</p>
+            
+            <ul class="skills-list">
+                <li><span>💻</span> <strong>Développement :</strong> Scripts sur mesure, UI/UX</li>
+                <li><span>⚙️</span> <strong>Projet global :</strong> Montage et optimisation de serveurs de A à Z</li>
+                <li><span>🎨</span> <strong>Graphisme :</strong> Création de logos et HUD</li>
+                <li><span>🚗</span> <strong>Customisation :</strong> Design 3D/Textures de vêtements et véhicules</li>
+            </ul>
+        </div>
+    </section>
+
+<!-- Section Scripts -->
+    <section id="scripts" class="container section">
+        <h2 class="section-title">Mes Scripts Exclusifs</h2>
+        <div class="grid">
+            
+            <!-- Carte ox_Target -->
+            <div class="script-card">
+                <div class="card-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="file-name">ox_Target.mp4</span>
+                </div>
+                <!-- VIDÉO DU SCRIPT ICI -->
+                <div class="script-video">
+                    <!-- 
+                      autoplay = se lance tout seul
+                      loop = tourne en boucle
+                      muted = silencieux (OBLIGATOIRE pour que l'autoplay fonctionne sur les navigateurs web)
+                      playsinline = pour que ça marche bien sur mobile
+                    -->
+                    <video autoplay loop muted playsinline>
+                        <source src="C:\Users\tarka\OneDrive\Desktop\Portfolio\vidéo\OX_Target.mp4" type="video/mp4">
+                        Ton navigateur ne supporte pas la lecture de vidéos.
+                    </video>
+                </div>
+                <div class="card-body">
+                    <h3>Ox Target inédit, redesign</h3>
+                    <p>J'ai refait à la main le ox Target "3ème oeil, la touche ALT" pour la facilité et la rapidité des menus. Tous les jobs auront leurs menu ox target pour faire leurs actions rapidement, ainsi que les adnim. J'ai aussi rajouter quelque action comme ouvrir le coffre ect. Le scripts est disponible sur mon discord</p>
+                </div>
+            </div>
+            
+            <!-- Carte OX inventory -->
+            <div class="script-card">
+                <div class="card-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="file-name">OX_inventory.mp4</span>
+                </div>
+                <!-- VIDÉO DU SCRIPT ICI -->
+
+            <div class="script-image" data-category="clothes">
+                <img src="C:\Users\tarka\OneDrive\Desktop\Portfolio\img-scripts\ox_inventory.png" alt="Vêtement Custom">
+
+            </div>
+                <div class="card-body">
+                    <h3>OX inventory, redesign</h3>
+                    <p>J'ai redesigné complètement le système d'inventaire. Je peux changer les couleurs, images, etc... Par rapport à votre serveur. Le script est disponible sur mon discord</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Section Galerie (Design, Vêtements, Voitures) -->
+    <section id="designs" class="container section">
+        <h2 class="section-title">Mes Créations Graphiques</h2>
+        
+        <!-- Boutons de filtre -->
+        <div class="filter-menu">
+            <button class="filter-btn active" data-filter="all">Tout voir</button>
+            <button class="filter-btn" data-filter="logo">Logos</button>
+            <button class="filter-btn" data-filter="clothes">Vêtements</button>
+            <button class="filter-btn" data-filter="cars">Voitures</button>
+        </div>
+
+        <!-- Grille d'images -->
+        <div class="gallery-grid">
+            <!-- Remplace l'URL dans 'src' par le chemin de tes vraies images (ex: src="img/mon-logo.png") -->
+            
+            <div class="gallery-item" data-category="logo">
+                <img src="C:\Users\tarka\OneDrive\Desktop\Portfolio\Image_logos\MidNigfht.webp" alt="Logo Serveur">
+                <div class="overlay"><span>Logo Roleplay</span></div>
+            </div>
+
+            <div class="gallery-item" data-category="menu">
+                <img src="C:\Users\tarka\OneDrive\Desktop\Portfolio\Image_logos\Banner_menu.webp" alt="Logo Serveur">
+                <div class="overlay"><span>Banner menu</span></div>
+            </div>
+
+           <div class="gallery-item" data-category="bannerdiscord">
+                <img src="C:\Users\tarka\OneDrive\Desktop\Portfolio\Image_logos\Midnight_Illegal_banner.webp" alt="Logo Serveur">
+                <div class="overlay"><span>Banner discord</span></div>
+            </div>
+
+            <div class="gallery-item" data-category="clothes">
+                <img src="https://via.placeholder.com/400x300/1a1a24/00f3ff?text=Gilet+Pare-Balles" alt="Vêtement Custom">
+                <div class="overlay"><span>Gilet LSPD Custom</span></div>
+            </div>
+
+            <div class="gallery-item" data-category="cars">
+                <img src="https://via.placeholder.com/400x300/1a1a24/00f3ff?text=Audi+RS6+Custom" alt="Voiture Custom">
+                <div class="overlay"><span>Skin Audi RS6</span></div>
+            </div>
+
+            <div class="gallery-item" data-category="logo">
+                <img src="https://via.placeholder.com/400x300/1a1a24/00f3ff?text=Logo+Gang" alt="Logo Gang">
+                <div class="overlay"><span>Logo Gang Custom</span></div>
+            </div>
+            
+            <div class="gallery-item" data-category="clothes">
+                <img src="https://via.placeholder.com/400x300/1a1a24/00f3ff?text=Veste+Gang" alt="Veste Gang">
+                <div class="overlay"><span>Veste Bloods</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <h2>Prêt à lancer votre serveur ?</h2>
+            <p>Contacte-moi sur Discord : <span class="highlight">https://discord.gg/GZxQtVWnkc</span></p>
+        </div>
+    </footer>
+
+    <!-- On relie le fichier JavaScript ici, juste avant la fin du body -->
+    <script src="script.js"></script>
+</body>
+</html>
